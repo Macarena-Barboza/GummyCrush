@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Trebuchet MS';
+  margin: 2rem 10px;
+}
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 2px;
+
+  & div {
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+}
+
+.red {
+  background-image: url('/images/oso-gomoso.png');
+}
+
+.blue {
+  background-image: url('/images/gomita-fruti.png');
+}
+
+.green {
+  background-image: url('/images/gomita-verde.png');
+}
+
+.orange {
+  background-image: url('/images/gomita-naranja.png');
+}
+
+.yellow {
+  background-image: url('/images/gomita-rosqui.png');
+}
+
+.pink {
+  background-image: url('/images/caramelo-rallado.png');
+}
