@@ -4,17 +4,26 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: 'Trebuchet MS';
-  margin: 2rem 10px;
+body {
+  background: linear-gradient(to top, rgb(162, 167, 251), rgb(252, 180, 231) 40%, rgb(255, 219, 226));
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
+
+.score {
+  background-color: rgb(244, 244, 244);
+  border: 1px solid #7d7d7d;
+  border-radius: 15px;
+  padding: 5px 55px;
+  margin: 10px;
+
+}
 
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
   justify-content: center;
 }
 
@@ -22,13 +31,20 @@ h1 {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  gap: 2px;
+  background-color: rgb(250, 232, 191);
+  border-radius: 20px;
+  padding: 8px;
+  border: 7px solid rgb(249, 207, 67);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.563);
 
   & div {
     background-size: cover;
     width: 60px;
     height: 60px;
     cursor: pointer;
+    border: 1px solid rgba(236, 207, 141, 0.544);
+    border-radius: 5px;
+    box-shadow: inset 2px 3px 3px #fff;
   }
 }
 
@@ -54,4 +70,19 @@ h1 {
 
 .pink {
   background-image: url('/images/caramelo-rallado.png');
+}
+
+@media (max-width: 500px) {
+  .app {
+    margin-top: 2rem;
+  }
+
+  .board {
+    margin-top: .5rem;
+
+    & div {
+      width: 37px;
+      height: 37px;
+    }
+  }
 }
